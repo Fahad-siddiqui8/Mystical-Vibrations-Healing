@@ -1,0 +1,16 @@
+# Logs and temporary files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*~
+
+# Antigravity temporary artifacts
+.system_generated/
+scratch/
