@@ -590,9 +590,9 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 35%;
-  opacity: 0.42;
-  filter: contrast(108%) brightness(105%) saturate(108%);
+  object-position: center 32%;
+  opacity: 0.88;
+  filter: contrast(106%) brightness(103%) saturate(106%);
   transition: opacity var(--transition-base);
 }
 
@@ -605,9 +605,10 @@ a {
   height: 100%;
   background: linear-gradient(
     180deg,
-    rgba(251, 249, 245, 0.35) 0%,
-    rgba(251, 249, 245, 0.60) 50%,
-    rgba(251, 249, 245, 0.96) 100%
+    rgba(251, 249, 245, 0.45) 0%,
+    rgba(251, 249, 245, 0.25) 30%,
+    rgba(251, 249, 245, 0.65) 75%,
+    rgba(251, 249, 245, 0.98) 100%
   );
   pointer-events: none;
 }
@@ -615,10 +616,21 @@ a {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 1120px;
+  max-width: 1160px;
   margin: 0 auto;
   text-align: center;
   width: 100%;
+  background: radial-gradient(
+    ellipse at 50% 48%,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(253, 250, 246, 0.90) 45%,
+    rgba(251, 248, 242, 0.68) 75%,
+    rgba(251, 248, 242, 0) 100%
+  );
+  padding: 3.5rem clamp(1.25rem, 4vw, 3.5rem) 2.5rem;
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .hero-badge {
@@ -626,49 +638,46 @@ a {
   align-items: center;
   gap: 0.6rem;
   background: #FFFFFF;
-  border: 1.5px solid var(--gold-primary);
-  padding: 0.5rem 1.35rem;
+  border: 2px solid var(--gold-primary);
+  padding: 0.55rem 1.45rem;
   border-radius: 99px;
   font-family: var(--font-display);
-  font-size: 0.76rem;
-  letter-spacing: 0.2em;
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gold-light);
+  color: #634306;
   margin-bottom: 2rem;
-  box-shadow: var(--shadow-subtle);
-  font-weight: 700;
+  box-shadow: 0 4px 18px rgba(150, 110, 32, 0.15), 0 1px 3px rgba(0, 0, 0, 0.08);
+  font-weight: 800;
 }
 
 .hero-title {
   margin-bottom: 1.65rem;
-  font-weight: 400;
-  line-height: 1.15;
-  color: #0A0B0E;
-  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9), 0 2px 16px rgba(251, 249, 245, 0.95);
+  font-weight: 500;
+  line-height: 1.14;
+  color: #050608;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 24px rgba(255, 255, 255, 1), 0 1px 3px rgba(255, 255, 255, 0.9);
 }
 
 .hero-title em {
   font-style: italic;
   font-family: var(--font-serif);
-  color: var(--gold-light);
-  background: linear-gradient(135deg, #7A530E 0%, #A87C26 50%, #573A08 100%);
+  color: #7D5713;
+  background: linear-gradient(135deg, #614006 0%, #966E20 50%, #4D3204 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .hero-description {
-  font-size: 1.2rem;
-  color: #1A1D24;
-  line-height: 1.8;
+  font-size: clamp(1.1rem, 1.4vw, 1.25rem);
+  color: #0D0F14;
+  line-height: 1.85;
   max-width: 820px;
   margin: 0 auto 3rem;
-  font-weight: 500;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
-}
-  max-width: 780px;
-  margin: 0 auto 2.85rem;
-  font-weight: 400;
+  font-weight: 600;
+  text-shadow: 0 1px 16px rgba(255, 255, 255, 1), 0 0 2px rgba(255, 255, 255, 0.95);
 }
 
 .hero-actions {
@@ -685,8 +694,14 @@ a {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  border-top: 1.5px solid rgba(150, 110, 32, 0.28);
-  padding-top: 2.85rem;
+  border-top: none;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1.5px solid rgba(150, 110, 32, 0.35);
+  border-radius: var(--radius-md);
+  padding: 2.25rem 2rem;
+  box-shadow: 0 12px 36px rgba(50, 40, 25, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   width: 100%;
 }
 
@@ -697,18 +712,18 @@ a {
 .stat-value {
   font-family: var(--font-serif);
   font-size: 2.35rem;
-  color: var(--gold-light);
+  color: #7D5713;
   margin-bottom: 0.35rem;
   letter-spacing: 0.02em;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .stat-label {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: #383B44;
-  font-weight: 600;
+  color: #0A0B0E;
+  font-weight: 700;
 }
 
 /* ==========================================================================
@@ -2091,8 +2106,13 @@ a {
   .nav-toggle-btn {
     display: flex;
   }
+  .hero-content {
+    padding: 2.25rem 1rem 1.5rem;
+  }
   .hero-stats {
     grid-template-columns: 1fr 1fr;
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
   }
   .frequencies-grid {
     grid-template-columns: repeat(2, 1fr);
